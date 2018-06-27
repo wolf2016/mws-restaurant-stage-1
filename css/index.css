@@ -38,7 +38,7 @@ align-items: left, expand height. #MEDIAQUERY */
   text-align: center;
   /* Added flex box for the list items to spread out when there's more space. May need to go elsewhere */
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -50,7 +50,6 @@ align-items: left, expand height. #MEDIAQUERY */
   text-align: left;
   /*Made max width 98% so it's more flexible with changing size and isn't touching left side of screen.*/
   max-width: 98%;
-  /* TODO: when screen is larger size split width // enforce flex direction with columns #MEDIAQUERY */
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -92,3 +91,16 @@ After 650px~, add second row for listings.
 Once the page hits greater than 1000px, expand margin.
 Add third row for listings at 1000px.*/
 /* lowest screen size at 320px */
+@media screen and (min-width: 1000px){
+  #map{
+
+  }
+  #restaurants-list li{
+    max-width: 33%;
+  }
+}
+@media screen and (min-width: 600px){
+  #restaurants-list li{
+    max-width: 50%;
+  }
+}

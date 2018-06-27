@@ -51,6 +51,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+	max-width: 100%;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -74,7 +75,6 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-/* TODO: when screen gets larger, re-center title #MEDIAQUERY */
 
 /* ====================== Map ====================== */
 #map {
