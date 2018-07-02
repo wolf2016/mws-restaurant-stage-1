@@ -39,17 +39,17 @@ align-items: left, expand height. #MEDIAQUERY */
   /* Added flex box for the list items to spread out when there's more space. May need to go elsewhere */
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  /*Made max width 98% so it's more flexible with changing size and isn't touching left side of screen.*/
-  max-width: 98%;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -79,7 +79,7 @@ align-items: left, expand height. #MEDIAQUERY */
   color: #fff;
   display: inline-block;
   font-size: 10pt;
-  margin: 15px 0 0;
+  margin: 15px 0 10px;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
@@ -91,16 +91,24 @@ After 650px~, add second row for listings.
 Once the page hits greater than 1000px, expand margin.
 Add third row for listings at 1000px.*/
 /* lowest screen size at 320px */
-@media screen and (min-width: 1000px){
-  #map{
-
-  }
+@media screen and (max-width: 700px){
+  /*Made max width 98% so it's more flexible with changing size and isn't touching left side of screen.*/
+    #restaurants-list li{
+  max-width: 98%;
+}
+}
+@media screen and (min-width: 701px) and (max-width: 1058px){
   #restaurants-list li{
-    max-width: 33%;
+    max-width: calc(40% - 15px);
   }
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 1059px){
+  #map{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   #restaurants-list li{
-    max-width: 50%;
+    max-width: calc(27% - 15px);
   }
 }
