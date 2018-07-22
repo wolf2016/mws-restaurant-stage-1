@@ -1,0 +1,114 @@
+/* ====================== Restaurant Filtering ====================== */
+.filter-options {
+  max-width: 100%;
+  height: 50px;
+  background-color: #3397DB;
+  align-items: center;
+  /* Added flex row to keep the filter options next to each other */
+  display: flex;
+  flex-direction: row;
+}
+.filter-options h2 {
+  color: white;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 20px;
+}
+.filter-options select {
+  background-color: white;
+  border: 1px solid #fff;
+  font-family: Arial,sans-serif;
+  font-size: 11pt;
+  height: 35px;
+  letter-spacing: 0;
+  margin: 10px;
+  padding: 0 10px;
+  max-width: calc(50% - 10px);
+}
+/* TODO: When page hits less than 445px width, switch display to column,
+align-items: left, expand height. #MEDIAQUERY */
+
+/* ====================== Restaurant Listing ====================== */
+#restaurants-list {
+  background-color: #f3f3f3;
+  list-style: outside none none;
+  margin: 0;
+  padding: 30px 15px 60px;
+  text-align: center;
+  /* Added flex box for the list items to spread out when there's more space. May need to go elsewhere */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#restaurants-list li {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  font-family: Arial,sans-serif;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  min-height: 380px;
+  padding: 0 30px 25px;
+  text-align: left;
+}
+#restaurants-list .restaurant-img {
+  background-color: #ccc;
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  min-height: 248px;
+  min-width: 100%;
+}
+#restaurants-list li h1 {
+  color: #f18200;
+  font-family: Arial,sans-serif;
+  font-size: 14pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1.3;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+#restaurants-list p {
+  margin: 0;
+  font-size: 11pt;
+}
+#restaurants-list li a {
+  background-color: orange;
+  border-bottom: 3px solid #eee;
+  color: #fff;
+  display: inline-block;
+  font-size: 10pt;
+  margin: 15px 0 10px;
+  padding: 8px 30px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* TODO: IF screen is larger than 1000px, stop letting map get larger.
+After 650px~, add second row for listings.
+Once the page hits greater than 1000px, expand margin.
+Add third row for listings at 1000px.*/
+/* lowest screen size at 320px */
+@media screen and (max-width: 700px){
+  /*Made max width 98% so it's more flexible with changing size and isn't touching left side of screen.*/
+    #restaurants-list li{
+  max-width: 98%;
+}
+}
+@media screen and (min-width: 701px) and (max-width: 1058px){
+  #restaurants-list li{
+    max-width: calc(40% - 15px);
+  }
+}
+@media screen and (min-width: 1059px){
+  #map{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #restaurants-list li{
+    max-width: calc(27% - 15px);
+  }
+}
