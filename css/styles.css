@@ -8,10 +8,10 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
+	background-color: #eee;
 	margin: 0;
 	position: relative;
-  /* TODO: set a max width for when the screen gets too large #MEDIAQUERY? */
+  max-width: 100%;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;

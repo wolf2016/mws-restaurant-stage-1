@@ -43,7 +43,6 @@
 
 .inside #footer {
   bottom: 0;
-  position: absolute;
   width: 100%;
 }
 #restaurant-name {
@@ -82,9 +81,7 @@
   padding: 20px 40px 30px;
   max-width: 100%;
 }
-#reviews-container {
-  padding: 30px 40px 80px;
-}
+
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
@@ -128,7 +125,7 @@
 .rdate{
   float: right;
   max-width: 50%;
-  color: white;
+  color: #aaa;
   margin-right: 15px;
 }
 .rrating{
@@ -144,6 +141,7 @@
 .rcomments{
 margin-left: 20px;
 margin-right: 20px;
+color: #aaa;
 }
 
 #reviews-list li p {
@@ -160,6 +158,13 @@ margin-right: 20px;
   }
   .rname{
     font-size: 18pt !important;
+  }
+  #restaurant-container, #reviews-container{
+    min-width: 320px;
+    padding: 20px 20px 30px;
+  }
+  #reviews-list li, #restaurant-img, #restaurant-cuisine {
+    max-width: 100%;
   }
 }
 
@@ -180,4 +185,16 @@ margin-right: 20px;
     font-size: 26pt !important;
     margin-top: -5px !important;
   }
+}
+@media screen and (min-width: 988px){
+  /* set to 800px because that's the widest the restaurant imgs are */
+  #restaurant-cuisine{
+    max-width: 800px;
+  }
+}
+
+/* set sizing of each element to include margin with max size.*/
+
+* {
+  box-sizing: border-box;
 }
